@@ -1,0 +1,68 @@
+<div id="loginModal" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()">×</button>
+                <h4 class="text-center">Login</h4>
+            </div>
+            <div class="modal-body">
+                <form name="loginForm" class="form col-md-12">
+                    <div class="form-group">
+                        <input name="email" ng-model="login.email" type="email" class="form-control input-lg" placeholder="Email" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input name="password" ng-model="login.password" type="password" class="form-control input-lg" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-lg btn-block" ng-click="loginSubmit(login)">Sign In</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                    <div ng-click="signInWithGoogle()" class='pull-left'><img src="/images/googleBtn.png" /></div>
+                    <button class="btn" data-dismiss="modal" aria-hidden="true" ng-click="closeModal(); showSignup()">Register</button>
+                    <button class="btn" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="signupModal" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()">×</button>
+                <h4 class="text-center">Sign Up</h4>
+            </div>
+            <div class="modal-body">
+                <form name="registerForm" class="form col-md-12">
+                    <div class="form-group">
+                        <input ng-model="register.email" type="email" class="form-control input-lg" placeholder="Email" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input ng-model="register.password" type="password" class="form-control input-lg" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input ng-model="register.passwordVerify" type="password" class="form-control input-lg" placeholder="Verify password">
+                    </div>
+                    <div class="form-group">
+                        <input ng-model="register.name" type="text" class="form-control input-lg" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input ng-model="register.home" type="text" class="form-control input-lg" id="pac-input-home" placeholder="Home Address">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-lg btn-block" ng-click="signUp(register)">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                    <div ng-click="signInWithGoogle()" class='pull-left'><img src="/images/googleBtn.png" /></div>
+                    <button class="btn" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

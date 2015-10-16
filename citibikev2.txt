@@ -1,0 +1,55 @@
+Citibike app layout
+
+Frontend
+
+public/
+	- index.html - main page to load all scripts and style sheets
+
+browser/components
+	- navbar as a directive
+		- .css
+		- .html
+		- .js
+	- footer as a directive
+		- .css
+		- .html
+		- .js
+
+browser/app
+	- home - this will have login/sign up functionality
+		- home.html
+		- home.css
+		- home.state.js
+	- map - this is the main view with the map and the start / end inputs
+		- map.html
+		- map.css
+		- map.state.js
+	- panel - or similar - will be nested view in map as an overlay
+		- panel.html
+		- panel.css
+		- panel.state.js
+
+Backend
+
+server/app
+app.js - express router
+	- router
+		+ error.js
+
+server/api/stations
+mongoose model
+	- stations.model.js
+	- stations.router.js
+	- seed file
+
+required bower packages
+	- angular
+	- angular-ui-router
+	- bootstrap
+	- jQuery
+
+required node packages 
+	- bluebird - for Mongoose promises
+	- express
+	- lodash - look into this, might be useful
+	- mongoose

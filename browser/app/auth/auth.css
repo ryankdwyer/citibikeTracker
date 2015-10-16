@@ -1,0 +1,18 @@
+.pac-container {
+    z-index: 1051 !important;
+}
+
+.pac-input-home {
+    background-color: #FFF;
+    z-index: 1051 !important;
+    position: fixed;
+    display: inline-block;
+    float: left;
+}
+
+.modal {
+    z-index: 20 !important;
+    position: absolute;
+    top: 15%;
+    opacity: 0.9 !important;
+}

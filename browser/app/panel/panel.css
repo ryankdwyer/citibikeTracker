@@ -1,0 +1,73 @@
+.panel-heading {
+    text-align: center;
+}
+
+.panel-body {
+    text-align: center;
+}
+
+.panel {
+    /*z-index: 10003;*/
+    width: 25%;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+
+#pac-input,
+#pac-input-origin,
+#pac-input-destination {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+}
+
+#pac-input:focus,
+#pac-input-origin:focus,
+#pac-input-destination:focus,
+{
+    border-color: #4d90fe;
+}
+
+.pac-container {
+    font-family: Roboto;
+}
+
+.btn {
+    background: transparent;
+    color: gray;
+    /* CSS Transition */
+    -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -o-transition: background .2s ease-in-out, border .2s ease-in-out;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+    /* Removes rounded corners */
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+#directionsPanel {
+    width: 30%;
+    height: calc(100vh - 120px);
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    /*background-color: white;*/
+}
+
+.adp {
+    background-color: white;
+}

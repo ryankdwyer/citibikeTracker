@@ -1,0 +1,30 @@
+<p class='panel'>Test</p>
+<div class="panel panel-default no-padding">
+    <div class="panel-heading">
+        <h3>Where are you headed?</h3>
+    </div>
+    <div class='panel-body'>
+        <form role="form">
+            <div class="form-group">
+                <!-- <label for="text" class='control-label'>Origin:</label> -->
+                <input type="text" class="form-control" id="pac-input-origin" name='origin' placeholder="Starting point...">
+            </div>
+    </div>
+    <div class='panel-body'>
+        <div class="form-group">
+            <!-- <label for="text" class='control-label'>Destination:</label> -->
+            <input type="text" class="form-control" id="pac-input-destination" name='destination' placeholder="Going to...">
+        </div>
+        <button class="btn btn-success" id='setLocBtn' ng-click='setBounds(); calcAndDisplayRoute()'>Get Directions</button>
+        </form>
+    </div>
+    <div class="panel-heading">
+        <form role="form" id="updateBtn">
+            <div class="form-group">
+                <button class="btn btn-warning" ng-click="updater()">Update</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id='directionsPanel'></div>
