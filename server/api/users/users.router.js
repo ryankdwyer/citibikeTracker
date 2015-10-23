@@ -9,7 +9,7 @@ router.post('/login', function (req, res, next) {
             if (user) {
                 console.log('Signing ' + user.name + ' in...');
                 req.session.user = user._id;
-                console.log(req.session.user);
+                // console.log(req.session.user);
                 res.json(user);
             } else {
                 console.log('User does not exist');
@@ -23,7 +23,7 @@ router.post('/register', function (req, res, next) {
     User.create(req.body)
         .then(function (user) {
             if (user) {
-                console.log('Successfully created: ', user);
+                // console.log('Successfully created: ', user);
                 res.status(201).json(user);
             }
         })
@@ -33,7 +33,7 @@ router.post('/register', function (req, res, next) {
 router.post('/logout', function (req, res, next) {
     var deletedUser = req.session;
     delete req.session;
-    console.log('logging out...', deletedUser);
+    // console.log('logging out...', deletedUser);
     res.json(200);
 });
 

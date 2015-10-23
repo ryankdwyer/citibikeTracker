@@ -1,4 +1,5 @@
 app.controller('MapController', function ($scope, MapFactory, stations, updates) {
+    var map;
     $scope.initMap = function () {
         var home = {
             lat: 40.729546,
