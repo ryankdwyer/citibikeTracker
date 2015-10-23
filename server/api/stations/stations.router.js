@@ -8,7 +8,7 @@ console.log('Citibike module, ', citibike);
 router.get('/stations', function(req, res, next){
 	Station.find()
 	.then(function(stations){
-		console.log('got the stations');
+		// console.log('got the stations');
 		res.send(stations);
 	})
 	.then(null, next);
