@@ -12,6 +12,7 @@
   "dependencies": {
     "angular": "^1.4.7",
     "bluebird": "^2.9.34",
+    "body-parser": "^1.14.1",
     "citibike": "^2.2.3",
     "express": "^4.13.3",
     "express-session": "^1.11.3",
