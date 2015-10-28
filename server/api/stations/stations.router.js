@@ -3,8 +3,6 @@ var router = require('express').Router();
 var Citibike = require('citibike');
 var citibike = new Citibike();
 
-console.log('Citibike module, ', citibike);
-
 router.get('/stations', function(req, res, next){
 	Station.find()
 	.then(function(stations){

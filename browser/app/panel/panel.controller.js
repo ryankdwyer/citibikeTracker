@@ -13,10 +13,11 @@ app.controller('PanelController', function ($scope, MapFactory) {
     });
 
     function newLatLngObj(locationObj) {
-        return new google.maps.LatLng(
-            locationObj.geometry.location.G,
-            locationObj.geometry.location.K
+        var newLoc = new google.maps.LatLng(
+            locationObj.geometry.location.lat(),
+            locationObj.geometry.location.lng()
             );
+        return newLoc;
     }
 
     $scope.setBounds = function () {
@@ -31,15 +32,12 @@ app.controller('PanelController', function ($scope, MapFactory) {
     $scope.getTravelTime = function () {
         var service = new google.maps.DistanceMatrixService;
         var infowindow = new google.maps.InfoWindow();
-
         service.getDistanceMatrix({
             origins: [newLatLngObj(MapFactory.origin)],
             destinations: [newLatLngObj(MapFactory.destination)],
             travelMode: google.maps.TravelMode.BICYCLING,
         }, function (response, status) {
             if (status === google.maps.DistanceMatrixStatus.OK) {
-                console.log(response);
-                console.log(response.rows[0].elements[0].duration.text);
                 infowindow.setContent(response.rows[0].elements[0].duration.text);
             }
         });
@@ -71,7 +69,8 @@ app.controller('PanelController', function ($scope, MapFactory) {
                     if (i === 0) directions.setPanel(document.getElementById('directionsPanel'));
                 }
             } else {
-                window.alert('Directions request failed due to: ', status);
+                // window.alert('Directions request failed due to: ', status);
+                console.log('failed', response.status);
             }
         });
     };
