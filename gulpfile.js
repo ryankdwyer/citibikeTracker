@@ -34,5 +34,5 @@ gulp.task('buildJS', ['lintJS'], function () {
 gulp.task('default', function () {
 	console.log('gulping');
 	gulp.start('buildJS');
-	gulp.watch('./browser/**/', ['buildJS']);
+	gulp.watch('./browser/*/', ['buildJS']);
 });

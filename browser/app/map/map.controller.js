@@ -27,6 +27,7 @@ app.controller('MapController', function ($scope, MapFactory, stations, updates)
             MapFactory.markers.push(marker);
             marker.addListener('click', function () {
                 infowindow.close();
+                var contentString;
                 contentString = "<p>Station: " + el.label + "</p>" +
                     "<p>Bikes: " + updates.data[el.stationId][0] + '</p>' +
                     "<p>Docks: " + updates.data[el.stationId][1] + '</p>' +
