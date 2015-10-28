@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/citibike_db');
+// mongoose.connect('mongodb://localhost/citibike_db');
+mongoose.connect(process.env.MONGOLAB_URI);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'mongodb connection error:'));
 var Schema = mongoose.Schema;
