@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server/app/app.js",
-    "postinstall": "bower install"
+    "postinstall": "bower install && seed"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "express": "^4.13.3",
     "express-session": "^1.11.3",
     "mongoose": "^4.1.5",
+    "node-mongo-seeds": "^2.2.7",
     "passport": "^0.3.0",
     "passport-google-oauth": "^0.2.0",
     "shortid": "^2.2.2"
