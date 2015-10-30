@@ -6,7 +6,9 @@ var passport = require('passport');
 
 var indexPath = path.join(__dirname, '..', '..', 'public', 'index.html');
 
-app.listen(3000, function () {
+var port = process.env.PORT || 3000;
+
+app.listen(port, function () {
     console.log('Patiently listening on port 3000');
 });
 
