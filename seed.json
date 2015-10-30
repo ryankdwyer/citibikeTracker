@@ -1,5 +1,5 @@
 {
-	"production": "process.env.MONGOLAB_URI",
+	"production": "mongodb://heroku_2ph6h2l7:d7mmevh0voj5t27vsgdrdo0nu5@ds045684.mongolab.com:45684/heroku_2ph6h2l7",
 	"dev": "localhost/DEV_DB_NAME",
 	"prod": "localhost/PROD_DB_NAME"
 }
