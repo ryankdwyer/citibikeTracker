@@ -1,6 +1,6 @@
 var Station = require('./stations.model.js').Station;
 var router = require('express').Router();
-var Citibike = require('citibike');
+var Citibike = require("../../../citibike/lib/citibike.js");
 var citibike = new Citibike();
 
 router.get('/stations', function(req, res, next){
