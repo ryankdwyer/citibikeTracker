@@ -16,6 +16,7 @@ app.factory('MapFactory', function($http){
 		getUpdates: function(){
 			return $http.get('/api/update')
 			.then(function(response){
+				console.log('update response, ', response);
 				return response;
 			});
 		},
