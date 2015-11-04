@@ -13,13 +13,14 @@ router.get('/stations', function(req, res, next){
 });
 
 router.get('/update', function (req, res, next) {
-  var updates,
-      updatesResults,
-      updatesObj= {};
+    console.log('hitting updates route');
+    var updates,
+        updatesResults,
+        updatesObj= {};
     citibike.getUpdates(null, function (data) {
         updatesResults = data.results;
         updatesResults.forEach(function(el){
-          updatesObj[el.id] = [el.availableBikes, el.availableDocks, data.lastUpdate];
+            updatesObj[el.id] = [el.availableBikes, el.availableDocks, data.lastUpdate];
         });
         res.send(updatesObj);
     });

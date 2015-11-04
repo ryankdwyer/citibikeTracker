@@ -1,7 +1,8 @@
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('map', {
-            url: '',
+            abstract: true,
+            url: '/s',
             templateUrl: "/app/map/map.html",
             controller: 'MapController',
             resolve: {
@@ -12,10 +13,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                     return MapFactory.getUpdates();
                 }
             }
-        });
-    $stateProvider
+        })
         .state('map.panel', {
-            url: '/panel',
+            url: '',
             templateUrl: '/app/panel/panel.html',
             controller: 'PanelController'
         });
