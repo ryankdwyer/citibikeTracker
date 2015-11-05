@@ -24,6 +24,7 @@ app.controller('MapController', function ($scope, MapFactory, stations, updates)
 
         stations.data.forEach(function (el) {
             var marker = $scope.drawLocation([el.latitude, el.longitude], {});
+            console.log('marker', marker);
             MapFactory.markers.push(marker);
             marker.addListener('click', function () {
                 infowindow.close();
